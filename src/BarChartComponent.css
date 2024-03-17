@@ -8,3 +8,9 @@
     margin: auto;
   }
   
+  /* BarChartWithBorderRadius.css */
+.recharts-rectangle {
+    rx: 5px;
+    ry: 5px;
+  }
+  

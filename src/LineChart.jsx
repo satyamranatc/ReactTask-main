@@ -1,6 +1,6 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, ResponsiveContainer } from 'recharts';
-import "./BarChartComponent.css"; // Import the CSS file
+import { LineChart, Line, ResponsiveContainer } from 'recharts';
+import "./LineChartWithShadow.css"; // Import the CSS file
 
 const data = [
   { name: 'Mon', uv: 10 },
@@ -12,20 +12,19 @@ const data = [
   { name: 'Sun', uv: 25 },
 ];
 
-const BarChartComponent = () => {
+const LineChartComponent = () => {
   return (
     <div className="card">
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart
+        <LineChart
           data={data}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
-          <XAxis dataKey="name" axisLine={false} tickLine={false} />
-          <Bar dataKey="uv" fill="#887ef2" barSize={20} />
-        </BarChart>
+          <Line type="monotone" dataKey="uv" stroke="#28C76F" strokeWidth={3} dot={false} />
+        </LineChart>
       </ResponsiveContainer>
     </div>
   );
 };
 
-export default BarChartComponent;
+export default LineChartComponent;
